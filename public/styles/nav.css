@@ -1,34 +1,35 @@
-nav  {
+nav {
+  position: fixed;
   display: flex;
   height: 120px;
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;
-  
+
 }
 
-.navbar span{
+.navbar span {
 
   font-family: 'Bungee', cursive;
 }
 
 .right {
-display: flex;
-flex-direction: column;
-justify-content: flex-end;  
-align-items: center;
-margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
 }
 
 .right span {
   font-family: 'Source Sans Pro', sans-serif;
- 
+
 }
 
 .icon {
-display: flex;
-flex-direction: column;  
-align-items: center;
-color:rgb(161, 6, 6)
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #d69812;
 }

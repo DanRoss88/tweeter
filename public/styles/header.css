@@ -1,0 +1,29 @@
+header {
+  height: 520px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+  background-color: #c28b00;
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+  font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .avatar {
+height: 200px;
+width: 200px;
+border-radius: 50%;
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;  
+}
+
+  .name {
+
+text-align: center;  
+margin-top: 20px;
+  }
