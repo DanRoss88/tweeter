@@ -1,6 +1,7 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
+  height: 400px;
   width: 100%;
   padding-top: 1.5em;
 }
@@ -25,6 +26,10 @@
 
 .counter {
   margin-left: auto;
+}
+.counter-red {
+  margin-left: auto;
+  color: red;
 }
 
 .tweeter button {

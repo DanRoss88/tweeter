@@ -23,6 +23,7 @@
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
   <!-- Font Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -62,7 +63,7 @@
         <textarea class="text-patch" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="new-tweet-submit">
           <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+          <output name="counter" id="charCounter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
   </main>
