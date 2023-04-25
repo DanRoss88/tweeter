@@ -38,36 +38,33 @@
 
 </head>
 
-<body>
+<body class="body-container">
   <!-- Top nav bar (fixed) -->
   <nav class="navbar">
-    <span class="tweeter">tweeter</span>
+    <span >tweeter</span>
     <div class="navbar right">
       <span><b> Write </b> a new tweet</span>
       <i class="icon fa-solid fa-angles-down"></i>
     </div>
   </nav>
-  <header>
+  <header class="header-container">
     <div>
-      <img class="avatar" src="/images/profile-hex.png">
+      <img class="header-avatar" src="/images/profile-hex.png">
     </div>
     <br>
     <div>
-      <h2 class="name">John Smith</h2>
+      <h2 class="header-name">John Smith</h2>
     </div>
   </header>
   <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <form method="POST" action="/tweets">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea class="text-patch" name="text" id="tweet-text"></textarea>
-        <div class="tweeter">
+  <main class="main-container">
+      <form class="new-tweet" method="POST" action="/tweets">
+        <textarea class="text-patch" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+        <div class="new-tweet-submit">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
-    </section>
   </main>
 </body>
 

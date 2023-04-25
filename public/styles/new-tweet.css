@@ -1,37 +1,22 @@
-main {
-  display: flex;
-  align-items: center;
-  width: 90%;
-  margin: 0 auto;
-  background-color: #293252;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
 .new-tweet {
   display: flex;
   flex-direction: column;
-  align-items: center;
-width: 80%;
-margin-top: 10px auto;
-border-top: 1px solid #0c0707;
-padding-top: 10px;
+  width: 100%;
+  padding-top: 1.5em;
 }
 
-.tweeter {
+.new-tweet-submit {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  border-top: 2px solid #0c0707;
   margin-top: 1rem;
-  
   font-family: 'Bungee', cursive;
-
+  padding-top: 1rem;
 }
 
 .text-patch {
   border: none;
-  width: 100%;
-  border-top: 1px solid #0c0707;
   background-color: #293252;
   padding: 10px;
   box-sizing: border-box;
@@ -43,5 +28,5 @@ padding-top: 10px;
 }
 
 .tweeter button {
-  margin-left:  1rem;
+  margin-left: 1rem;
 }
