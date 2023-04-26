@@ -18,9 +18,10 @@
 
 .text-patch {
   border: none;
-  background-color: #293252;
+  background-color: #1d1d20;
   padding: 10px;
   box-sizing: border-box;
+  color: white;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -34,4 +35,18 @@
 
 .tweeter button {
   margin-left: 1rem;
+}
+
+.error {
+justify-content: center;
+color:  darkred;
+border: 3px solid darkred;
+padding: 8px;
+margin-bottom: 8px;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+.error i {
+color: darkred;
+padding-right: 4em;
 }

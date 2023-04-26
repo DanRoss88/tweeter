@@ -33,3 +33,15 @@ nav {
   align-items: center;
   color: #857242;
 }
+
+#new-tweet-button {
+  
+  cursor: pointer;
+  transition: color  cubic-bezier(0.19, 1, 0.22, 1);
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+#new-tweet-button:hover {
+color : rgb(49, 11, 11)
+}

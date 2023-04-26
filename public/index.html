@@ -17,12 +17,13 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <!-- New Tweets -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
- <!-- Tweet -->
- <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+  <!-- Tweet -->
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.full.min.js" integrity="sha512-wb3lqal2VtYhmlPAr232VP+Zus676CFAEYdywxIUSxG6F/X9WhN6SpREkWUdwBvMpd6gCKuKTGHhdum6m1wOvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -44,7 +45,7 @@
   <!-- Top nav bar (fixed) -->
   <nav class="navbar">
     <span>tweeter</span>
-    <div class="navbar right">
+    <div id="new-tweet-button" class="navbar right">
       <span><b> Write </b> a new tweet</span>
       <i class="icon fa-solid fa-angles-down"></i>
     </div>
@@ -60,7 +61,10 @@
   </header>
   <!-- Page-specific (main) content here -->
   <main class="main-container">
-    <form class="new-tweet" method="POST" action="/tweets">
+    <form id="new-tweet" class="new-tweet" method="POST" action="/tweets">
+      <!-- Errors Here-->
+      <div id="error-msg-over" class="error"><i class="fa-solid fa-triangle-exclamation">  Too many characters!</i></div>
+      <div id="error-msg-null" class="error"><i class="fa-solid fa-circle-exclamation">  Nothing to tweet?</i></div>
       <textarea class="text-patch" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
       <div class="new-tweet-submit">
         <button type="submit">Tweet</button>
@@ -69,8 +73,8 @@
     </form>
 
     <div id="tweets-container">
-  </div>
-  
+    </div>
+
   </main>
 </body>
 

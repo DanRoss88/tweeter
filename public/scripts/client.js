@@ -5,64 +5,100 @@
  */
 
 $(document).ready(function() {
+      
+  /*const tweetData = [
+        {
+          "user": {
+            "name": "Newton",
+            "avatars": "https://i.imgur.com/73hZDYK.png",
+            "handle": "@SirIsaac"
+          },
+          "content": {
+            "text": "If I have seen further it is by standing on the shoulders of giants"
+          },
+          "created_at": 1682332505690
+        },
+        {
+          "user": {
+            "name": "Descartes",
+            "avatars": "https://i.imgur.com/nlhLi3I.png",
+            "handle": "@rd"
+          },
+          "content": {
+            "text": "Je pense , donc je suis"
+          },
+          "created_at": 1682418905690
+        }
+      ]
 
-  // request to ppost
+*/
+  const $errorOver = $('#error-msg-over').hide();
+  const $errorNull = $('#error-msg-null').hide();
+  const $form = $('#new-tweet');
+  const $newTweet = $('.new-tweet').hide();
+  const $newCharCounter =$('#charCounter')
 
-  $.ajax(
-  "/tweets" , "POST"
-)
+  $("#new-tweet-button").click(() => {
+    $newTweet.slideToggle().find('textArea').focus();
+  });
+  
+  // request to post
+  $form.on("submit", (event) => {
+    event.preventDefault();
+    const data = $form.serialize();
+    const tweetText = $('#tweet-text').val();
 
-
-
-  const tweetsData = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1682287216995
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1682373616995
+    if(!tweetText){
+      $errorNull.slideDown();
+      return;
     }
-  ];
-// renders tweets and adds them to the DOM
-  const $renderTweets = function(tweetsData) {
+     if(tweetText.length > 140) {
+      $errorOver.slideDown();
+      return;
+    }
 
-    for (const tweetData of tweetsData) {
-      const $tweet = createTweetElement(tweetData);
-      console.log("$tweet")
-      $('#tweets-container').prepend($tweet);
-    };
+    
+
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: data
+    })
+    
+    .then(()=> {
+      $("#tweet-text").val('');
+      loadTweets();
+    
+    $errorNull.slideUp();
+    $errorOver.slideUp();
+    $newCharCounter.val(140);
+  });
+});
+
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
-/// creates new tweet elements
-  const createTweetElement = function(tweetData) {
-    let $tweet = $(`
+  
+  
+  /// creates new tweet elements
+    const createTweetElement = function(tweet) {
+      let $tweet = $(`
         <article class="tweet">
         <header class="tweet-header">
-          <span class="tweet-avatar"><img src="${tweetData.user.avatars}" alt="tweeter avatar"></span>
-          <span class="tweet-id tweet-user"> ${tweetData.user.name} </span>
-          <span class="tweet-id tweet-username">${tweetData.user.handle}</span>
+          <span class="tweet-avatar"><img src="${tweet.user.avatars}" alt="tweeter avatar"></span>
+          <span class="tweet-id tweet-user"> ${tweet.user.name} </span>
+          <span class="tweet-id tweet-username">${tweet.user.handle}</span>
         </header>
         <div class='tweet-content'>
         <p>
-          ${tweetData.content.text}
+          ${escape(tweet.content.text)}
         </p>
       </div>
         <footer class="tweet-footer">
-          <span class="tweet-date">${tweetData.created_at}</span>
+          <span class="tweet-date">${timeago.format(tweet.created_at)}</span>
           <div id='tweet-icons'>
             <i class="icon1 fa-solid fa-flag"></i>
             <i class="icon2 fas fa-retweet"></i>
@@ -71,13 +107,33 @@ $(document).ready(function() {
          </footer>
         </article>
       `);
-    console.log("$tweet", $tweet);
-    return $tweet;
-  };
-  
-  $renderTweets(tweetsData);
+    
+      return $tweet;
+    }
+  // renders tweets and adds them to the DOM
+    const renderTweets = (tweets) => {
 
-});
+      for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $('#tweets-container').prepend($tweet);
+    }
+    };
+    
+    //loads tweets
+    const loadTweets = function(){
+      $.ajax({
+        method: "GET",
+        url: "/tweets"
+      })
+      .then((tweets)=> {
+        renderTweets(tweets)
+      })
+};
+    
+    loadTweets();  
+    
+  
+    });
 
 
 
