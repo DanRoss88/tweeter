@@ -1,0 +1,83 @@
+#tweet-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+
+}
+
+article.tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border: 3px solid black;
+
+}
+
+article.tweet:hover {
+  box-shadow: 7px 7px 3px rgb(150, 148, 148);
+
+}
+
+header.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+.tweet-user {
+  padding-left: 0.5em;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.tweet-username {
+  opacity: 0.2;
+}
+
+
+.tweet-content {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  
+  border-bottom: 3px solid #0c0707;
+}
+
+.tweet-content p {
+  display: flex;
+  justify-content: flex-start;
+  
+}
+
+footer.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+}
+#tweet-icons{
+  color: blue;
+}
+#tweet-icons :hover, :focus{
+ color: yellow;
+}
+
+.tweet-date {
+/* cdnjs moment?*/
+  font-size: 16px;
+}

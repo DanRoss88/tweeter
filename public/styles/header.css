@@ -1,19 +1,17 @@
-.header-container {
+header.header-container {
   height: 520px;
   width: 100%;
   display: flex;
   flex-direction: column; 
   justify-content: center;
   align-items: center;
-  padding-top: 2em;
+  padding-top: 160px;
   background-color: #c28b00;
   background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
   font-family: 'Source Sans Pro', sans-serif;
   }
 
-  .header-avatar {
-height: 200px;
-width: 200px;
+.header-avatar {
 border-radius: 50%;
 background-size: cover;
 background-position: center;
