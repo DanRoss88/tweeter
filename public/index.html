@@ -4,6 +4,7 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -23,7 +24,11 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.full.min.js" integrity="sha512-wb3lqal2VtYhmlPAr232VP+Zus676CFAEYdywxIUSxG6F/X9WhN6SpREkWUdwBvMpd6gCKuKTGHhdum6m1wOvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.full.min.js"
+    integrity="sha512-wb3lqal2VtYhmlPAr232VP+Zus676CFAEYdywxIUSxG6F/X9WhN6SpREkWUdwBvMpd6gCKuKTGHhdum6m1wOvQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--Timeago is not adjusting to the proper time in my browser. If there is still a problem during submission, I will try to de bug with a mentor -->
+
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -41,41 +46,46 @@
 
 </head>
 
-<body class="body-container">
-  <!-- Top nav bar (fixed) -->
-  <nav class="navbar">
+<body>
+  <nav>
     <span>tweeter</span>
-    <div id="new-tweet-button" class="navbar right">
-      <span><b> Write </b> a new tweet</span>
-      <i class="icon fa-solid fa-angles-down"></i>
+    <div class="new-tweeter write-new">
+      <span id="new-tweet-button"><b>Write</b> a new tweet</span>
+      <i class="fa-solid fa-angles-down"></i>
     </div>
   </nav>
-  <header class="header-container">
+  <header>
     <div>
-      <img class="header-avatar" src="/images/profile-hex.png">
+      <img src="/images/profile-hex.png">
     </div>
-    <br>
+
     <div>
-      <h2 class="header-name">John Smith</h2>
+      <h2>John Smith</h2>
     </div>
   </header>
+
+
   <!-- Page-specific (main) content here -->
-  <main class="main-container">
-    <form id="new-tweet" class="new-tweet" method="POST" action="/tweets">
+  <main class="container">
+    <section class="new-tweet">
       <!-- Errors Here-->
-      <div id="error-msg-over" class="error"><i class="fa-solid fa-triangle-exclamation">  Too many characters!</i></div>
-      <div id="error-msg-null" class="error"><i class="fa-solid fa-circle-exclamation">  Nothing to tweet?</i></div>
-      <textarea class="text-patch" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-      <div class="new-tweet-submit">
-        <button type="submit">Tweet</button>
-        <output name="counter" id="charCounter" class="counter" for="tweet-text">140</output>
+      <div id="error-msg-null" class="error"><i class="fa-solid fa-circle-exclamation"></i> Nothing to tweet?</div>
+      <div id="error-msg-over" class="error"><i class="fa-solid fa-triangle-exclamation"></i> What are you going on
+        about?</div>
+      <form id="tweet-form" class="tweet-form" action="/tweets" method="POST">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+      <div class="tweets-container" id="tweets-container">
+
       </div>
-    </form>
-
-    <div id="tweets-container">
-    </div>
-
+    </section>
   </main>
+
 </body>
 
 </html>

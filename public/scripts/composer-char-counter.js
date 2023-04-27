@@ -1,18 +1,29 @@
 
-$(document).ready(function(){
+$(document).ready(function() {
   
-$(".new-tweet textarea").on("input", function(){
-  const tweetLength = $(this).val().length;
-  const charLeft = 140 - tweetLength;
-  const counter = $(this).siblings('.new-tweet-submit').find('.counter');
-counter.text(charLeft);
-if (charLeft < 0) {
-  counter.addClass("counter-red");
-  }
-else {
-  counter.removeClass("counter-red");
-}
-});
-});
+  let textarea = $('.new-tweet form textarea');
+  let counter = textarea.siblings('.counter');
 
 
+  textarea.on('input', function() {
+
+    let length = $(this).val().length;
+    console.log('Input length line 14', length);
+
+    
+    let remaining = 140 - length;
+    console.log('remaining characters line, 18', remaining);
+
+
+    $('.new-tweet .counter').text(remaining);
+
+    
+    if (remaining < 0) {
+      $('.counter').css('color', 'red');
+    } else {
+      $('.counter').css('color', 'black');
+    }
+
+  });
+});
+  

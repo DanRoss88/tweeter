@@ -1,52 +1,76 @@
-.new-tweet {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-}
 
-.new-tweet-submit {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 2px solid #0c0707;
-  margin-top: 1rem;
-  font-family: 'Bungee', cursive;
-  padding-top: 1rem;
-}
+*
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color:rgb(71, 73, 83);
+  }
 
-.text-patch {
-  border: none;
-  background-color: #1d1d20;
-  padding: 10px;
-  box-sizing: border-box;
-  color: white;
-  font-family: 'Source Sans Pro', sans-serif;
-}
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 10px;
+    background-color:rgb(71, 73, 83);
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  #tweet-form {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .new-tweet div {
+  margin-bottom: 1.0rem;
+  }
 
-.counter {
-  margin-left: auto;
-}
-.counter-red {
-  margin-left: auto;
-  color: red;
-}
+  .new-tweet label {
+    display: line;
+    font-size: large;
+    margin-bottom: 0.5rem;
+  }
+  
+  .new-tweet textarea {
+    display: line;
+    width: 100%;
+    max-height: 55px;
+    font-size: 16px;
+    color: rgb(14, 13, 13);;
+    padding: 10px;
+    border: none;
+    border-bottom: 3px solid #3a3131;
+    resize: vertical;
+    margin-bottom: 0.5rem;
+    background-color:rgb(71, 73, 83);
+  }
 
-.tweeter button {
-  margin-left: 1rem;
-}
+  .new-tweet button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #4056A1;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Bungee', cursive;
+    cursor: pointer;
+  }
 
-.error {
-justify-content: center;
-color:  darkred;
-border: 3px solid darkred;
-padding: 8px;
-margin-bottom: 8px;
-font-family: 'Source Sans Pro', sans-serif;
-}
+  .counter {
+    font-size: 22px;
+    margin-top: 0.5rem;
+    float: right;
+    font-family: Bungee;
+  }
 
-.error i {
-color: darkred;
-padding-right: 4em;
-}
+  #error {
+    justify-content: center;
+    color:  rgb(168, 10, 10);
+    margin-right: auto ;
+    border: 3px solid rgb(168, 10, 10);
+    padding: 8px;
+    margin-bottom: 8px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    }
+    
+    #error i {
+    color: rgb(168, 10, 10);
+    }
+    
