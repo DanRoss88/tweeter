@@ -1,24 +1,16 @@
 
 $(document).ready(function() {
-  
-  let textarea = $('.new-tweet form textarea');
-  let counter = textarea.siblings('.counter');
 
+  let textarea = $('.new-tweet form textarea');
 
   textarea.on('input', function() {
 
-    let length = $(this).val().length;
-    console.log('Input length line 14', length);
+    let textLength = $(this).val().length;
+    let charLeft = 140 - textLength;
 
-    
-    let remaining = 140 - length;
-    console.log('remaining characters line, 18', remaining);
+    $('.new-tweet .counter').text(charLeft);
 
-
-    $('.new-tweet .counter').text(remaining);
-
-    
-    if (remaining < 0) {
+    if (charLeft < 0) {
       $('.counter').css('color', 'red');
     } else {
       $('.counter').css('color', 'black');
@@ -26,4 +18,4 @@ $(document).ready(function() {
 
   });
 });
-  
+

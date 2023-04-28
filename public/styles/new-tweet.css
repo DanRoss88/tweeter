@@ -1,76 +1,80 @@
+* body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: rgb(71, 73, 83);
+}
 
-*
-  body {
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color:rgb(71, 73, 83);
-  }
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 10px;
+  background-color: rgb(71, 73, 83);
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    margin-top: 1rem;
-    padding: 10px;
-    background-color:rgb(71, 73, 83);
-    font-family: 'Source Sans Pro', sans-serif;
-  }
-  #tweet-form {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  .new-tweet div {
+#tweet-form {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.new-tweet div {
   margin-bottom: 1.0rem;
-  }
+}
 
-  .new-tweet label {
-    display: line;
-    font-size: large;
-    margin-bottom: 0.5rem;
-  }
-  
-  .new-tweet textarea {
-    display: line;
-    width: 100%;
-    max-height: 55px;
-    font-size: 16px;
-    color: rgb(14, 13, 13);;
-    padding: 10px;
-    border: none;
-    border-bottom: 3px solid #3a3131;
-    resize: vertical;
-    margin-bottom: 0.5rem;
-    background-color:rgb(71, 73, 83);
-  }
+.new-tweet label {
+  display: line;
+  font-size: large;
+  margin-bottom: 0.5rem;
+}
 
-  .new-tweet button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #4056A1;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    font-family: 'Bungee', cursive;
-    cursor: pointer;
-  }
+.new-tweet textarea {
+  display: line;
+  width: 100%;
+  max-height: 75px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  ;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #1f1b1b;
+  resize: vertical;
+  margin-bottom: 0.5rem;
+  background-color: rgb(71, 73, 83);
+}
 
-  .counter {
-    font-size: 22px;
-    margin-top: 0.5rem;
-    float: right;
-    font-family: Bungee;
-  }
+.new-tweet textarea#tweet-text {
+  color: black;
+}
 
-  #error {
-    justify-content: center;
-    color:  rgb(168, 10, 10);
-    margin-right: auto ;
-    border: 3px solid rgb(168, 10, 10);
-    padding: 8px;
-    margin-bottom: 8px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
-    }
-    
-    #error i {
-    color: rgb(168, 10, 10);
-    }
-    
+.new-tweet button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4056A1;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Bungee', cursive;
+  cursor: pointer;
+}
+
+.counter {
+  font-size: 22px;
+  margin-top: 0.5rem;
+  float: right;
+  font-family: Bungee;
+}
+
+#error {
+  justify-content: center;
+  color: rgb(168, 10, 10);
+  margin-right: auto;
+  border: 3px solid rgb(168, 10, 10);
+  padding: 8px;
+  margin-bottom: 8px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+
+#error i {
+  color: rgb(168, 10, 10);
+}

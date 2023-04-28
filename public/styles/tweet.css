@@ -1,95 +1,98 @@
-
-  article {
+article {
   transition: box-shadow 0.3s ease-in-out;
 }
 
- article:hover {
+article:hover {
   box-shadow: 5px 5px 10px rgba(16, 0, 0, 0.666);
 }
 
 .tweets-container .tweet-header {
-    background-color:rgb(71, 73, 83);
-    background-image: none;
-    height: 90px;
-    border: 3px #110f0f;
-    font-size: 16px;
+  background-color: rgb(71, 73, 83);
+  background-image: none;
+  height: 90px;
+  border: 3px #110f0f;
+  font-size: 16px;
+}
+
+div#tweets-container.tweets-container {
+  padding-bottom: 3rem;
+
 }
 
 .tweet {
-    border: 3px solid #131111;
-    border-radius: 5px;
-    padding: 0.5rem;
-    margin: 1em;
+  border: 3px solid #131111;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 1em;
 }
 
 .tweet-content {
   padding-left: 0.5rem;
-  border-bottom: 3px solid #242020;
+  border-bottom: 2px solid #242020;
 }
 
 .tweet-header {
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-  .tweet-header i.fa-brands {
-    padding: 0.25rem;
-    font-size: 3rem;
-    color: #0d0d0e;
-  }
+.tweet-header i.fa-brands {
+  padding: 0.25rem;
+  font-size: 3rem;
+  color: #0d0d0e;
+}
 
-  .tweet header p:first-of-type {
-   font-weight: bold;
-   margin-right: auto;
-  }
-  
-  .tweet header p:last-of-type {
-    font-weight: bold;
-    color: #8a8282;
-    margin-left: auto;
-  }
+.tweet header p:first-of-type {
+  font-weight: bold;
+  margin-right: auto;
+}
 
-  .tweet footer {
-    padding-top: 1rem;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+.tweet header p:last-of-type {
+  font-weight: bold;
+  color: #8a8282;
+  margin-left: auto;
+}
 
-  .tweet footer .actions {
-    display: flex;
-    gap: 1rem;
-    color: #242020;
-    transition: color 0.3s ease-in-out;
-  }
+.tweet footer {
+  padding-top: 1rem;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-  .tweet footer .actions i:hover {
-    color: #4056A1;
-  }
-  .tweet footer span {
-    margin: 10px;
-    font-size: 0.9rem;
-     color: #000000;
-     
-    justify-content: flex-start;
-  }
+.tweet footer .actions {
+  display: flex;
+  gap: 1rem;
+  color: #242020;
+  transition: color 0.3s ease-in-out;
+}
 
-  .tweet-header img {
-    width: 50px;
-    height: 50px;
-    padding: 0.35em;
-    margin-top: 0px;
-    margin-right: 0.5rem;
-    background-color: #312e2e;
-    border-radius: 70%;
-    }
-  
+.tweet footer .actions i:hover {
+  color: #4056A1;
+}
 
+.tweet footer span {
+  margin: 10px;
+  font-size: 0.9rem;
+  color: #000000;
+  justify-content: flex-start;
+}
 
-  div .tweet-content {
-    font-size: 0.8em;
-    margin-bottom: 0px;
-  }
+.tweet-header img {
+  width: 50px;
+  height: 50px;
+  padding: 0.35em;
+  margin-top: 0px;
+  margin-right: 0.5rem;
+  background-color: #312e2e;
+  border-radius: 70%;
+}
+
+div .tweet-content {
+  font-size: 0.8em;
+  margin-bottom: 0px;
+  color: #000000;
+}

@@ -54,24 +54,25 @@
       <i class="fa-solid fa-angles-down"></i>
     </div>
   </nav>
+
   <header>
     <div>
       <img src="/images/profile-hex.png">
     </div>
-
     <div>
       <h2>John Smith</h2>
     </div>
   </header>
 
-
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
+
       <!-- Errors Here-->
       <div id="error-msg-null" class="error"><i class="fa-solid fa-circle-exclamation"></i> Nothing to tweet?</div>
       <div id="error-msg-over" class="error"><i class="fa-solid fa-triangle-exclamation"></i> What are you going on
         about?</div>
+
       <form id="tweet-form" class="tweet-form" action="/tweets" method="POST">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
@@ -80,12 +81,11 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
-      <div class="tweets-container" id="tweets-container">
 
-      </div>
+      <div class="tweets-container" id="tweets-container"></div>
+
     </section>
   </main>
-
 </body>
 
 </html>

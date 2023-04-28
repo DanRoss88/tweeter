@@ -5,8 +5,12 @@
  */
 html {
   box-sizing: border-box;
+  background-color: rgb(71, 73, 83) !important;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -17,52 +21,50 @@ nav {
 main {
   width: 90%;
   margin: 0 auto;
-  background-color:rgb(71, 73, 83);
+  background-color: rgb(71, 73, 83) !important;
 }
+
 /*
  * Global layout stuff
  */
 
 body {
-  background-color:rgb(71, 73, 83);
+  background-color: rgb(71, 73, 83) !important;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* Had to use "!important" for an issue with dark reader overriding background colour */
 
 @media only screen and (min-width: 1024px) {
   /* CSS for Tablets to Smartphones */
 
 
-  body { 
+  body {
     display: flex;
   }
 
-  
-
-  .new-tweet {  
+  .new-tweet {
     width: 90%;
     flex-direction: column;
-    margin-top: 15em;
+    margin-top: 171px;
     height: 500px;
     margin-right: 3em;
   }
-  
 
-  body > header { 
+  body>header {
     display: flex;
-    margin-top: 20em;
+    margin-top: 200px;
     height: 24em;
     margin-right: 3em;
     margin-left: 3em;
     width: 50%;
-}
+  }
 
 
-body > nav { 
-  display: flex;
-  background-color: #4056A1;
-  
-}
+  body>nav {
+    display: flex;
+    background-color: #4056A1;
+  }
 
 }
