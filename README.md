@@ -10,7 +10,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ![w/o compose box](https://github.com/DanRoss88/tweeter/blob/master/docs/TweeterW!O!composeBox.png?raw=true)
 
-![DarkMode off w/o compose](https://github.com/DanRoss88/tweeter/blob/master/docs/TweeterW!O!composeBox.png?raw=true)
+![Mobile Tweeter](https://github.com/DanRoss88/tweeter/blob/master/docs/mobileTweeter.png?raw=true))
 
 ![DarkMode off Tweeter](https://github.com/DanRoss88/tweeter/blob/master/docs/DarkModeOffTweeter.png?raw=true)
 
